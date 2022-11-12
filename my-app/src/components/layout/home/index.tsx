@@ -20,7 +20,7 @@ const HomePage=()=>{
     
 useEffect(() =>{
     console.log("Read data server"); 
-    http.get<Array<ICategoryItem>>("/api/categories")  // Запитуємо дані  з сервера
+    http.get<Array<ICategoryItem>>("/api/categories")  // Запитуємо дані  з сервера (/api/categories)
     .then(resp =>{
         console.log("server response",resp);
         setlist(resp.data); // Записуємо дані отримані з сервера
