@@ -43,3 +43,10 @@ K:\A_Step\Lesson_CI\4 СЕМЕСТР\88 (29-10-22) React\WebShopAPI\WebShopAPI\b
 K:\A_Step\Lesson_CI\4 СЕМЕСТР\88 (29-10-22) React\WebShopAPI\WebShopAPI\bin\Debug\net6.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
 K:\A_Step\Lesson_CI\4 СЕМЕСТР\88 (29-10-22) React\WebShopAPI\WebShopAPI\bin\Debug\net6.0\Microsoft.Extensions.Identity.Core.dll
 K:\A_Step\Lesson_CI\4 СЕМЕСТР\88 (29-10-22) React\WebShopAPI\WebShopAPI\bin\Debug\net6.0\Microsoft.Extensions.Identity.Stores.dll
+K:\A_Step\Lesson_CI\4 СЕМЕСТР\88 (29-10-22) React\WebShopAPI\WebShopAPI\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+K:\A_Step\Lesson_CI\4 СЕМЕСТР\88 (29-10-22) React\WebShopAPI\WebShopAPI\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
+K:\A_Step\Lesson_CI\4 СЕМЕСТР\88 (29-10-22) React\WebShopAPI\WebShopAPI\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
+K:\A_Step\Lesson_CI\4 СЕМЕСТР\88 (29-10-22) React\WebShopAPI\WebShopAPI\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.dll
+K:\A_Step\Lesson_CI\4 СЕМЕСТР\88 (29-10-22) React\WebShopAPI\WebShopAPI\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+K:\A_Step\Lesson_CI\4 СЕМЕСТР\88 (29-10-22) React\WebShopAPI\WebShopAPI\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
+K:\A_Step\Lesson_CI\4 СЕМЕСТР\88 (29-10-22) React\WebShopAPI\WebShopAPI\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
