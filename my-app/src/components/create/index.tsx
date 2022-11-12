@@ -1,7 +1,12 @@
 import React, { useState } from "react";
 import { ICreateCategory } from "./types";
+import http from "../../http_common";
+import { useNavigate } from "react-router-dom";
+import axios from "axios";
 
 const CategoryCreatePage = () => {
+
+    const navigate = useNavigate();
 
     const [state, setState] = useState<ICreateCategory>({
         name: ""
@@ -31,7 +36,28 @@ const CategoryCreatePage = () => {
 
     const handleSubmit = (e: React.SyntheticEvent) => {
         e.preventDefault();
-        console.log("Send data server", state);
+        var formData= new FormData(); //відправка на сервер форми категорії
+        formData.append("name",state.name);
+        if(state.image)
+            formData.append("image",state.image);
+
+        console.log("Send form data server", formData);
+
+       /*  http.post<void>("/api/categories/create",
+        formData, {
+            headers: {
+                'Content-Type': 'multipart/form-data',
+                Accept:"multipart/form-data"
+            }
+        }) */
+
+        axios.post(`${http.getUri()}/api/categories/create`,
+            formData
+        )
+        .then(resp => {
+            console.log("server response", resp);
+            navigate("/");
+        });
     }
 
     return (
