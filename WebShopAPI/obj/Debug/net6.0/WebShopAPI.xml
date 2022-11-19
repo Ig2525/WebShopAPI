@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>WebShopAPI</name>
+    </assembly>
+    <members>
+        <member name="P:WebShopAPI.Models.LoginViewModel.Email">
+            <summary>
+            
+            </summary>
+            <example>admin@gmail.com</example>
+        </member>
+        <member name="P:WebShopAPI.Models.LoginViewModel.Password">
+            <summary>
+            
+            </summary>
+            <example>123456</example>
+        </member>
+        <member name="P:WebShopAPI.Models.RegisterViewModel.Email">
+            <summary>
+            
+            </summary>
+            <example>user@gmail.com</example>
+        </member>
+        <member name="P:WebShopAPI.Models.RegisterViewModel.FistName">
+            <summary>
+            
+            </summary>
+            <example>Іван</example>
+        </member>
+        <member name="P:WebShopAPI.Models.RegisterViewModel.LastName">
+            <summary>
+            
+            </summary>
+            <example>Мельник</example>
+        </member>
+        <member name="P:WebShopAPI.Models.RegisterViewModel.Phone">
+            <summary>
+            
+            </summary>
+            <example>+38(097)232-12-34</example>
+        </member>
+        <member name="P:WebShopAPI.Models.RegisterViewModel.Image">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:WebShopAPI.Models.RegisterViewModel.Password">
+            <summary>
+            
+            </summary>
+            <example>123456</example>
+        </member>
+    </members>
+</doc>
