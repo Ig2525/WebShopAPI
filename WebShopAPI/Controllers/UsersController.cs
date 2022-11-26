@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using LibData;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using WebShopAPI.Models;
@@ -19,6 +20,7 @@ namespace WebShopAPI.Controllers
         }
 
         [HttpGet]
+        [Authorize]
         public async Task<IActionResult> Index()
         {
             var model = await _context.Users
