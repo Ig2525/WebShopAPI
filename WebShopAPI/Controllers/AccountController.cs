@@ -25,13 +25,13 @@ namespace WebShopAPI.Controllers
         {
             var user = await _userManager.FindByEmailAsync(model.Email);
             if (user == null)
-                return BadRequest();
+                return BadRequest(new { error = "Дані введені невірно" });
             if (await _userManager.CheckPasswordAsync(user, model.Password))
             {
                 string token = await _jwtTokenService.GenerateTokenAsync(user);
                 return Ok(new { token });
             }
-            return BadRequest();
+            return BadRequest(new {error= "Дані введені невірно"});
         }
 
         [HttpPost("register")]
