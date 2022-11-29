@@ -3,10 +3,15 @@ import { useNavigate } from "react-router-dom";
 import { IAuthLogin, IAuthResponse } from "./types";
 import http from "../../../http_common";
 import axios from "axios";
+import { useDispatch } from "react-redux";
+import { AuthActionTypes, IUser } from "../store/types";
+/* import jwt from "jsonwebtoken" */
+import jwtDecode from "jwt-decode";
 
 const LoginPage = () =>
 {
     const navigate = useNavigate();
+    const dispatch = useDispatch();
 
     const [state, setState] = useState<IAuthLogin>({
         email: "",
@@ -28,8 +33,15 @@ const LoginPage = () =>
       )
       .then(resp => {
         const { data } = resp;
-          console.log("server response", resp);
-          //navigate("/"); 
+        localStorage.tocen = data.token;
+        const token=jwtDecode<IUser>(data.token);
+        const user: IUser={
+          email: token.email,
+          image: token.image
+        }
+        dispatch({type: AuthActionTypes.LOGIN_SUCCESS, payload: user});
+          console.log("server response", data);
+          navigate("/"); 
       }, bad_resp => {
           console.log("Помилка ", bad_resp);
       });        

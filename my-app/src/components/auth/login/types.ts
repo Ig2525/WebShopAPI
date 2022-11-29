@@ -5,5 +5,5 @@ export interface IAuthLogin {
 }
 
 export interface IAuthResponse {
-    token: String
+    token: string
 }
