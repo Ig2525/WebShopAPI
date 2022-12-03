@@ -35,6 +35,7 @@ const LoginPage = () =>
         const { data } = resp;
         localStorage.tocen = data.token;
         const token=jwtDecode<IUser>(data.token);
+        http.defaults.headers.common["Authorization"]=`Bearer ${data.token}`;
         const user: IUser={
           email: token.email,
           image: token.image
@@ -44,11 +45,12 @@ const LoginPage = () =>
           navigate("/"); 
       }, bad_resp => {
           console.log("Помилка ", bad_resp);
+                   
       });        
   }
     return (
       <>
-          <h1>Login Page</h1>
+          <h1 className="text-center">Login Page</h1>
           <form onSubmit={handleSubmit} className="col-md-6 offset-md-3">
               <div className="mb-3">
                   <label htmlFor="email" className="form-label">Вкажіть назву</label>

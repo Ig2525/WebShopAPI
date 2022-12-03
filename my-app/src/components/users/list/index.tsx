@@ -3,13 +3,13 @@ import { Link } from "react-router-dom";
 import http from "../../../http_common";
 import { IUserItem } from "./types";
 
-const HomePage = () => {
+    const UserPage = () => {
 
     const [list, setList] = useState<Array<IUserItem>>([
     ]);
 
     useEffect(() => {        
-        //console.log("Read data server");
+        
         http.get<Array<IUserItem>>("/api/users")
             .then(resp => {
                 console.log("server response", resp);
@@ -45,4 +45,4 @@ const HomePage = () => {
     );
 }
 
-export default HomePage;
+export default UserPage;

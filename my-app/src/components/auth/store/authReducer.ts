@@ -1,9 +1,10 @@
-import { AuthActionTypes, AuthState } from "./types";
-const initialState : AuthState={
+import { AuthActionTypes, AuthState } from './types';
+const initialState : AuthState= {
     isAuth: false
 }
-export const authReducer = (state=initialState, action : any) : AuthState => {
-    switch(action.type){
+
+export const authReducer = (state = initialState, action : any) : AuthState => {
+    switch(action.type) {
         case AuthActionTypes.LOGIN_SUCCESS: {
             return {
                 ...state,
@@ -12,7 +13,15 @@ export const authReducer = (state=initialState, action : any) : AuthState => {
                     ...action.payload
                 }
             };
-        }
+        } 
+        case AuthActionTypes.LOGOUT: {
+            return {
+                ...state,
+                isAuth: false,
+                user: undefined
+            };
+        } 
+        default:
+            return state;
     }
-    return state;
 }

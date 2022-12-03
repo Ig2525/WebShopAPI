@@ -39,7 +39,7 @@ namespace WebShopAPI.Controllers
         {
             var user = await _userManager.FindByEmailAsync(model.Email);
             if (user != null)
-                return BadRequest(new { error = "Користувач уже зареєстровано" });
+                return BadRequest(new { error = "Користувача уже зареєстровано" });
             try
             {
                 string fileName = string.Empty;

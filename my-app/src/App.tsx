@@ -6,6 +6,8 @@ import SignupPage from './components/auth/signup';
 import CategoryCreatePage from './components/create';
 import Layout from './components/layout';
 import HomePage from './components/layout/home';
+import UserPage from './components/users/list';
+
 
 
 function App() {
@@ -21,6 +23,7 @@ function App() {
           <Route path="login" element={<LoginPage/>} />
           <Route path="signup" element={<SignupPage/>} />
           <Route path="category/create" element={<CategoryCreatePage />} />
+          <Route path="users" element={<UserPage/>} />
         </Route>
       </Routes>
     </>
