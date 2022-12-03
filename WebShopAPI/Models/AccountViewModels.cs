@@ -47,4 +47,11 @@
         /// <example>123456</example>
         public string Password { get; set; }
     }
+
+    public class ChangeNewPasswordViewModel
+    {
+        public string CurrentPassword { get; set; }
+        public string NewPassword { get; set; }
+        public string ConfirmPassword { get; set; }
+    }
 }
