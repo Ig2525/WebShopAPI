@@ -36,7 +36,7 @@ return (
                         <ul className="dropdown-menu dropdown-menu-dark text-small">
                             <li><Link to="#" className="dropdown-item" >New project...</Link></li>
                             <li><Link to="#" className="dropdown-item" >Settings</Link></li>
-                            <li><Link to="#" className="dropdown-item" >Profile</Link></li>
+                            <li><Link to="/profile" className="dropdown-item" >Profile</Link></li>
                             <li><hr className="dropdown-divider"/></li>
                             <li><Link to="/" className="dropdown-item" 
                             onClick={()=>{
